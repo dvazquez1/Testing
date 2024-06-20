@@ -52,8 +52,8 @@ class GameRound:
 class Game:
     def __init__(self):
         self.endGame = False
-        self.participant = Participant("Spock")
-        self.secondParticipant = Participant("Kirk")
+        self.participant = Participant("Mortadelo")
+        self.secondParticipant = Participant("Filemón")
     def start(self):
         while not self.endGame:
             GameRound(self.participant, self.secondParticipant)
@@ -77,6 +77,7 @@ class Game:
             resultString = "Winner is {name}".format(name=self.secondParticipant.name)
         print(resultString)
 
-game = Game()
-game.start()
+if __name__ == "__main__":
+    game = Game()
+    game.start()
 
